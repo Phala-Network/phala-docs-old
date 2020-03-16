@@ -1,6 +1,6 @@
 # Life of a Command
 
-![](./static/sequence-query.png)
+![](./static/sequence-command.png)
 
 ## Send a transactionn
 
@@ -77,7 +77,7 @@ Demo:
 
 Deep dive:
 
-- Basic concept
+- [Basic concept](./basic-concept.md)
 - [Life of a bridge](./life-of-a-bridge.mc)
 - Life of a Commad
 - [Life of a Query](./life-of-a-query.md)
