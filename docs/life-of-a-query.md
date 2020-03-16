@@ -30,9 +30,9 @@ The second step is to encrypt the query object just like commands:
 ```js
 {
   Cipher: {
-    ivB64: "CYEp7INreHULzzme",
-    cipherB64: "Z965oE85R/PvVrMINHtBrrprN5ZgLf5LvdkxqtB0ibALdMTNMlk05bFOba7aYROAK2V13uQpRp7rSEB/wsCye6wjFh4cuFn2pUZFiW6FV+uxTxY9nldxbG68XJAQUbaK8h++ZgFatwiDcMncfTdL7EFq4h72N3oiggZNl41f9DzQi3iw+TNnTNnjmZuV2UYGVxXzCyxjzvc=",
-    pubkeyB64: "BAehlLIq/lxLHhglZ9gxe6Q0QntP1NNFV5gnztnF9oj9AckhDbXtEfl6kMC6TUNxMBw0t9d9jxU54Z3Ct02I6qE=",
+    iv_b64: "CYEp7INreHULzzme",
+    cipher_b64: "Z965oE85R/PvVrMINHtBrrprN5ZgLf5LvdkxqtB0ibALdMTNMlk05bFOba7aYROAK2V13uQpRp7rSEB/wsCye6wjFh4cuFn2pUZFiW6FV+uxTxY9nldxbG68XJAQUbaK8h++ZgFatwiDcMncfTdL7EFq4h72N3oiggZNl41f9DzQi3iw+TNnTNnjmZuV2UYGVxXzCyxjzvc=",
+    pubkey_b64: "BAehlLIq/lxLHhglZ9gxe6Q0QntP1NNFV5gnztnF9oj9AckhDbXtEfl6kMC6TUNxMBw0t9d9jxU54Z3Ct02I6qE=",
   }
 }
 ```
@@ -41,11 +41,11 @@ And sign it with the on-chain identity:
 
 ```js
 {
-  queryPayload: "{\"Cipher\":{\"iv_b64\":\"CYEp7INreHULzzme\",\"cipher_b64\":\"Z965oE85R/PvVrMINHtBrrprN5ZgLf5LvdkxqtB0ibALdMTNMlk05bFOba7aYROAK2V13uQpRp7rSEB/wsCye6wjFh4cuFn2pUZFiW6FV+uxTxY9nldxbG68XJAQUbaK8h++ZgFatwiDcMncfTdL7EFq4h72N3oiggZNl41f9DzQi3iw+TNnTNnjmZuV2UYGVxXzCyxjzvc=\",\"pubkey_b64\":\"BAehlLIq/lxLHhglZ9gxe6Q0QntP1NNFV5gnztnF9oj9AckhDbXtEfl6kMC6TUNxMBw0t9d9jxU54Z3Ct02I6qE=\"}}",
+  query_payload: "{\"Cipher\":{\"iv_b64\":\"CYEp7INreHULzzme\",\"cipher_b64\":\"Z965oE85R/PvVrMINHtBrrprN5ZgLf5LvdkxqtB0ibALdMTNMlk05bFOba7aYROAK2V13uQpRp7rSEB/wsCye6wjFh4cuFn2pUZFiW6FV+uxTxY9nldxbG68XJAQUbaK8h++ZgFatwiDcMncfTdL7EFq4h72N3oiggZNl41f9DzQi3iw+TNnTNnjmZuV2UYGVxXzCyxjzvc=\",\"pubkey_b64\":\"BAehlLIq/lxLHhglZ9gxe6Q0QntP1NNFV5gnztnF9oj9AckhDbXtEfl6kMC6TUNxMBw0t9d9jxU54Z3Ct02I6qE=\"}}",
   origin: {
     origin: "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d"
-    sigB64: "+D+HmELS10dmNzy3We83/4lyTPCmnfhvP/ewQ2u2wD9QXbtS5g1zI8CdLrr7bBeJCn1HEQuLLqbuOmXz03hxAA=="
-    sigType: "sr25519"
+    sig_b64: "+D+HmELS10dmNzy3We83/4lyTPCmnfhvP/ewQ2u2wD9QXbtS5g1zI8CdLrr7bBeJCn1HEQuLLqbuOmXz03hxAA=="
+    sig_type: "sr25519"
   }
 }
 ```
