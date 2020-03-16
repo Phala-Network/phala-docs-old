@@ -54,7 +54,7 @@ The `origin` is an object with the signature and the on-chain identity (the publ
 identity and the signature attached, pRuntime will be able to validate the query is indeed created
 by a certain person.
 
-Both the signing and the encryption is optional. For public accessible query like `TotoalIssuance`,
+Both the signing and the encryption is optional. For public accessible query like `TotalIssuance`,
 the requester can just send the plain text to pRuntime.
 
 ## Process the query
@@ -66,7 +66,7 @@ Then the request is dispatched to the targeted contract. The contract can do any
 contract states, process the data, and even perform non-deterministic operations like generating
 random numbers. Finally the contract must return a response.
 
-Since the signature is included, it's up to the contract to authenticate the request. If the authenticationn failed, usually it should return an error response `NotAuthorized`.
+Since the signature is included, it's up to the contract to authenticate the request. If the authentication failed, usually it should return an error response `NotAuthorized`.
 
 In the case of `FreeBalance`, the contract first check if the query is signed by the same identity.
 It returns the balance of the queried account:
@@ -87,7 +87,7 @@ or returns an error if it's not authorized:
 }
 ```
 
-The respose is encrypted and signed by the pRuntime before sending back. Finally the client SDK
+The response is encrypted and signed by the pRuntime before sending back. Finally the client SDK
 decrypts the response. In this way, the query is fully end-to-end encrypted.
 
 ## See also
@@ -100,7 +100,7 @@ Deep dive:
 
 - [Basic concept](./basic-concept.md)
 - [Life of a bridge](./life-of-a-bridge.md)
-- [Life of a Commad](./life-of-a-command.md)
+- [Life of a Command](./life-of-a-command.md)
 - Life of a Query
 
 Projects:

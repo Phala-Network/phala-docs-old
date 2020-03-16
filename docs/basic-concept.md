@@ -25,10 +25,10 @@ runtime.
 ### pRuntime to the blockchain
 
 When registering a pRuntime, the blockchain validates the Remote Attestation report offered by
-the pRuntime. The upcoming messages from the pRuntime are signed by the commited identity. So the
+the pRuntime. The upcoming messages from the pRuntime are signed by the committed identity. So the
 blockchain can trust pRuntime until the registration expires.
 
-The Remtoe Attestatio report is a x509 certificate signed by Intel. The certificate is validatated
+The Remote Attestation report is a x509 certificate signed by Intel. The certificate is validated
 on-chain with our wasm port of `ring`. For more details please refer to the blockchain docs.
 
 ### The blockchain to pRuntime
@@ -43,7 +43,7 @@ validate the block justification within a singed Substrate block.
 Blockchain and pRuntime are passive - they only process received messages. There's a bridge called
 `pHost` to bring messages between the blockchain and pRuntime back and forth.
 
-On the one hand, the bridge listen to the new block announncement from the blockchain and sync the
+On the one hand, the bridge listen to the new block announcement from the blockchain and sync the
 newly finalized blocks to pRuntime. Onn the other hand, it listen to the pRuntime side effec events
 and write back to the blockchain.
 
@@ -51,31 +51,31 @@ The bridge also helps pRuntime initialize its light client and register the pRun
 
 ### Trust between user and pRuntime
 
-Users can intereact with pRuntime (and the confidenntial cotnracts inside it).
+Users can interact with pRuntime (and the confidential contracts inside it).
 
 The registered pRuntime has its public key published on the blockchain. So users can establish an
-end-to-end encrypted communication channel to pRuntime directly by a key agreement scheme. In 
+end-to-end encrypted communication channel to pRuntime directly by a key agreement scheme. In
 Phala Network, we use ECDH (secp256r1) for key agreement and AEAD-AES-GCM-256 for encryption. The
 messages are encrypted and then transmitted by direct connection between user and pRuntime, or
 relayed by the blockchain.
 
 ## Interaction with confidential contracts
 
-**Command** annd **Query** are two operations to interact with confidential contracts in Phala
+**Command** and **Query** are two operations to interact with confidential contracts in Phala
 Network.
 
-Commannd is the operation that can cause state transition. Commands are initiated by a client
-and then encrypted, siged, pushed to the blockchain, and relayed to pRuntime. Commands are one-way
+Command is the operation that can cause state transition. Commands are initiated by a client
+and then encrypted, signed, pushed to the blockchain, and relayed to pRuntime. Commands are one-way
 transmitted and not responded. As an example, token transferring is a typical command.
 
 Query is used to get the current state of the contract. Unlike the nowadays blockchains, in Phala
 Network, queries are also signed by the client. The contract can perform flexible authentication
-on each query. As a resullt, it's easy to create a fine-grained access control based on the
+on each query. As a result, it's easy to create a fine-grained access control based on the
 on-chain identity. Queries are created, encrypted, signed and sent to pRuntime directly. The
 contract can send any response based on the current contract state.
 
 With the command-query segregation design, Phala Network is possible to offer
-confidential-perserving smart conntract that scales.
+confidential-preserving smart contract that scales.
 
 ## See also
 
@@ -87,7 +87,7 @@ Deep dive:
 
 - Basic concept
 - [Life of a bridge](./life-of-a-bridge.md)
-- [Life of a Commad](./life-of-a-command.md)
+- [Life of a Command](./life-of-a-command.md)
 - [Life of a Query](./life-of-a-query.md)
 
 Projects:

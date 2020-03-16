@@ -2,11 +2,11 @@
 
 ![](./static/screenshot.png)
 
-This is the final deliverables of pLIBRA Milestone 2. It implementes a confidential `Balances`-like
+This is the final deliverables of pLIBRA Milestone 2. It implements a confidential `Balances`-like
 token contract where the balances are hidden to everyone except the owner.
 
 The Balances module is a confidential contract on Phala Network. The contract execution happens
-inside TEE (Trusted Execution Environment, a hardware encalve) to keep the internal state secret.
+inside TEE (Trusted Execution Environment, a hardware enclave) to keep the internal state secret.
 
 Only the authorized commands and queries are executed. So the unauthorized balance queries are
 rejected.
@@ -15,7 +15,7 @@ rejected.
 
 The frontend is deployed here: <https://webui.phala.network/>
 
-To play with Phala Netowrk, you also need to deploy the rest of the components. We made a Docker
+To play with Phala Network, you also need to deploy the rest of the components. We made a Docker
 image for easy deployment:
 
 1. Clone [plibra-grant-docker](https://github.com/Phala-Network/plibra-grant-docker)
@@ -37,7 +37,7 @@ image for easy deployment:
     sudo docker run -p 8080:8080 phala:test  
     ```
 
-Enter the Substrate websocks RPC endpoint in `Settinngs` tab. If you published the port to 8080,
+Enter the Substrate websocket RPC endpoint in `Settings` tab. If you published the port to 8080,
 use `http://localhost:8080/ws`.
 
 ![](./static/status-bar.png)
@@ -52,11 +52,11 @@ Once the pRuntime is connected, it shows "connected: (latency)". It should also 
 
 ![](./static/transfer.png)
 
-To transfer some token, please selecte an identity as the sender first. In the screenshot we are
-tranfserring 1000 tokens from Alice to Bob.
+To transfer some token, please select an identity as the sender first. In the screenshot we are
+transferring 1000 tokens from Alice to Bob.
 
-At beginnng, Alice is the only persono with token. So we should transfer some tokens from Alice to
-another person. Otherwise the trasaction is not going to be executed because of insufficient funds.
+At beginning, Alice is the only person with token. So we should transfer some tokens from Alice to
+another person. Otherwise the transaction is not going to be executed because of insufficient funds.
 
 ## Check balance
 
@@ -70,10 +70,10 @@ balance, it should show 1000 as well.
 
 ![](./static/query-bob.png)
 
-However, as by the design, only the owner can see his balannce. `FreeBalannce for Bob` button
+However, as by the design, only the owner can see his balance. `FreeBalance for Bob` button
 always queries Bob's balance. So if you choose another identity other than Bob, you will get a
 `NotAuthorized` error as shown in the screenshot above. This is the unique feature provided of
-confidetial cotracts.
+confidential contracts.
 
 Finally, `TotalIssuance` shows the total token issuance. It doesn't require any authentication.
 
@@ -95,7 +95,7 @@ Deep dive:
 
 - [Basic concept](./basic-concept.md)
 - [Life of a bridge](./life-of-a-bridge.md)
-- [Life of a Commad](./life-of-a-command.md)
+- [Life of a Command](./life-of-a-command.md)
 - [Life of a Query](./life-of-a-query.md)
 
 Projects:

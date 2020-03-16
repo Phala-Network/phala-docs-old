@@ -2,9 +2,9 @@
 
 ![](./static/sequence-command.png)
 
-## Send a transactionn
+## Send a transactions
 
-Suppose Alice wants to send Bob 1000 DEV token. She first creates a transfer commannd:
+Suppose Alice wants to send Bob 1000 DEV token. She first creates a transfer command:
 
 ```js
 {
@@ -15,16 +15,16 @@ Suppose Alice wants to send Bob 1000 DEV token. She first creates a transfer com
 }
 ```
 
-As the commannd will be posted to the blockchain, which is publicly accessible by everyone. So
+As the command will be posted to the blockchain, which is publicly accessible by everyone. So
 instead of posting the plain text, she should encrypt the command so that only the confidential
 contract can decrypt it.
 
-The secret key used for the encryption is frrom ECDH key agreement. Alice can get the public key
+The secret key used for the encryption is from ECDH key agreement. Alice can get the public key
 of the pRuntime by `get_info` RPC. With the public key, she can derive a secret key with her own
 key pair (ephemeral key).
 
-Then the transacton is serialized to utf8 encoded binary, and encrypted by AEAD-AES-GCM-256 with the
-derived secrete key. The encrypted data are base64 encoded:
+Then the transaction is serialized to utf8 encoded binary, and encrypted by AEAD-AES-GCM-256 with
+the derived secrete key. The encrypted data is base64 encoded:
 
 ```js
 {
@@ -52,8 +52,8 @@ The bridge `pHost` is a daemon to transmit data between the blockchain and pRunt
 After observed a new finalized block on the Substrate side, it passes the block to pRuntime by
 calling `sync_block` RPC.
 
-pRuntime treats all the incoming information as untrusted. It validates all the input blocks with a
-Substrate light client. Particularly, it validates the GRANDPA block justification. So only the
+pRuntime treats all the incoming information as not trusted. It validates all the input blocks with
+a Substrate light client. Particularly, it validates the GRANDPA block justification. So only the
 finalized block can pass the check.
 
 ## Execution
@@ -66,7 +66,7 @@ created by the client. Please notice that the public key used in ECDH key agreem
 in the payload. Thus now it's the time for pRuntime to derive the secret key and decrypt the
 command.
 
-Then the transactionn dispatcher pass the command to the targeted confidential cotnract for
+Then the transaction dispatcher passes the command to the targeted confidential contract for
 execution. Note that there's no response to a transaction, just like what in Ethereum.
 
 ## See also
@@ -79,7 +79,7 @@ Deep dive:
 
 - [Basic concept](./basic-concept.md)
 - [Life of a bridge](./life-of-a-bridge.md)
-- Life of a Commad
+- Life of a Command
 - [Life of a Query](./life-of-a-query.md)
 
 Projects:
