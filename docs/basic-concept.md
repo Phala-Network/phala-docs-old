@@ -86,6 +86,7 @@ Demo:
 Deep dive:
 
 - Basic concept
+- [Life of a bridge](./life-of-a-bridge.mc)
 - [Life of a Commad](./life-of-a-command.md)
 - [Life of a Query](./life-of-a-query.md)
 

@@ -11,6 +11,7 @@ Demo:
 Deep dive:
 
 - [Basic concept](./docs/basic-concept.md)
+- [Life of a bridge](./docs/life-of-a-bridge.mc)
 - [Life of a Commad](./docs/life-of-a-command.md)
 - [Life of a Query](./docs/life-of-a-query.md)
 
