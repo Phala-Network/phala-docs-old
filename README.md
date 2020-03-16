@@ -4,8 +4,25 @@ Documentations of Phala Network.
 
 ## Index
 
-- [Balances (M2)](docs/m2.md): The documentatioo of Balances confidential contract, the M2 of W3F
-  Grant pLIBRA.
-- [Whitepaper](https://github.com/Phala-Network/Whitepaper): The technical whitepaper
+Demo:
+
+- [M2: Confidential Balances Contract](./balances.md): pLIBRA Milestone 2
+
+Deep dive:
+
+- [Basic concept](./docs/basic-concept.md)
+- [Life of a Commad](./docs/life-of-a-command.md)
+- [Life of a Query](./docs/life-of-a-query.md)
+
+Projects:
+
+- [phala-blockchain](https://github.com/Phala-Network/phala-blockchain): The blockchain and bridge
+- [phala-pruntime](https://github.com/Phala-Network/phala-pruntime): pRuntime, the TEE worker
+- [phala-polka-apps](https://github.com/Phala-Network/phala-polka-apps): The Web UI and SDK
+- [plibra-grant-docker](https://github.com/Phala-Network/plibra-grant-docker): Docker build for M2
+- [Technical Whitepaper](https://github.com/Phala-Network/Whitepaper)
+
+Others:
+
 - [Wiki](https://github.com/Phala-Network/phala-docs/wiki): Community collaboration docs (compatible
   hardware, etc).
