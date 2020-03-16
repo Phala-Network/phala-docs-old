@@ -6,7 +6,7 @@ Documentations of Phala Network.
 
 Demo:
 
-- [M2: Confidential Balances Contract](./balances.md): pLIBRA Milestone 2
+- [M2: Confidential Balances Contract](./docs/balances.md): pLIBRA Milestone 2
 
 Deep dive:
 
