@@ -1,0 +1,176 @@
+# KSM×PHA StakeDrop
+Phala will hold airdrop program in 3 waves for KSM holders, DOT holders, and FIL holders. The first round -- KSM × PHA StakeDrop -- will be started at May 1st.
+
+## On StakeDrop
+### Introduction
+
+- Total ammount of PHA reward: expected 2.7% of PHA's initial supply (27 million PHA). If the amount of staked KSM exceeds the expection, the reward of FIL lockdrop will be reduced accordingly. 
+- Target user: KSM holder (participants of Polkadot community and Kusama Network)
+- How: Stake KSM and nominate whitelisted validators on Kusama Network for 30 - 90 days to obtain PHA reward. 
+- Before staring the participants should:
+    - hold KSM
+    - review the validators whitelist and the rules
+    - access our StakeDrop Web UI
+    
+### Background
+#### What is a Kusama Nominator?
+Kusama adopts NPoS (Nominated Proof-of-Stake) to elect validators. Nominators secure the relay chain by selecting good validators and staking DOTs. Nominators shall share both the return and the risk of their validators. To learn how to nominate and obtain staking return, please refer to [Nominator Manual](https://wiki.polkadot.network/docs/en/maintain-nominator).
+
+#### Why StakeDrop
+Lockdroo is a fair token distribution mechanism where participants obtain airdrop rewards through locking for a certain period of time.
+We were inspired by the program of Edgeware and Plasm which fruit decent growth by ETH lockdrop. We, however, prefer to be better connected with Polkadot community, and thus decided to hold the lockdrop combined with KSM and DOT in Wave I and Wave II. 
+Becasue lockdrop using smart contract can't be implemented on Kusama, we came out this brand-new plan: StakeDrop.
+
+### What Is StakeDrop
+StakeDrop is a new type of lockdrop designed by Phala team. To participate, you just stake your KSM, nominate **whitelisted validators** as what you are doing now, and additionally get PHA according to the **StakeDrop points** calculated in the event.
+To better present the value of our StakeDrop, we will deliver PHA as an ERC20 token before our mainnet launch. An open-source script will be published to monitor the staking activities on Kusama Network. If a participant met the requirements, he or she would be able to claim PHA on Etherum once his or her staking period completed.
+
+**Highlights of StakeDrop**:
+
+- zero loss of opportunity cost: a participant can still receive KSM returns by NPoS while participating the StakeDrop.
+- easy to participate: a participant doesn't have to pay extra efforts for the event but to stake KSM for whitelisted validators for more than 30 days.
+- enhance the security of Kusama Network: attracted by StakeDrop, people would be more willing to join Kusama Network staking, which will help the whole network to be more secure.
+- no influence on governance: all the verified nodes are whitelisted and be nominated by nominators.
+
+### StakeDrop Model
+
+User Parameter:
+
+- KSM lock amount: $Lock_{KSM} \in [10, +\infty)$
+- Lock period: $Days \in [30, 90]$
+
+Rules of distribution:
+
+1. The ideal supply
+   $$Q_{ideal} = 27,000,000\ \text{PHA}$$
+2. PHA is distributed according to the StakeDrop points $P$
+   $$P = Rank(Days) \cdot Lock_{KSM}$$
+3. where $Rank(d)$ is the weighted staking time $d$, which is exponentially increasing
+   $$Rank(d) = \frac{1}{30} d \cdot 1.01^{(d-30)}$$
+4. $Q_{ideal}$ will be proportionally devided according to $P$ hold by each participant; If the sum exceeds the threshold $P_{max}$, the exchange rate to PHA will be fixed
+   $$Drop = \frac{P_i}{min(P_{max}, \sum{P_i})} \cdot Q_{ideal}$$
+5. where the threshold $P_{max}$ equals to the total points when 27 million KSM were staked for 90 days
+   $$P_{max} = Rank(90) \cdot 2.7\times10^6$$
+
+### Total Supply of the StakeDrop
+In StakeDrop, all participants will proportionally devide PHA according to the StakeDrop points he or she gains. We set the minimal reward $1\ \text{PHA/KSM}$ as a baseline for participants.
+- If the final airdrop points were to be less than the threshold (27 million KSM staked for 90 days), all partipants would devide the 27 million PHA proportionally; 
+- If the final airdrop points exceeded the threshold, the lowest exchange rate would be fixed. The final amount of airdrop reward would exceed $Q_{ideal}$, occupying the rest amount of PHA reward left for the Wave III lockdrop.
+
+#### The Weight of Reward
+Normally, staking reward is linearly related to staking period (R-Linear in the figure). But in StakeDrop, the participants have no extra cost because they can still receive KSM staking rewards. Thus we apply an exponential function (R-Time in the figure).
+
+![GIQU76.png](https://s1.ax1x.com/2020/04/09/GIQU76.png)
+
+As it shows, Rank is more encouraging to extend the staking period.
+
+#### Case
+
+Assuming user Gavin participated the StakeDrop and staked 100 KSM:
+- if he stopped after staking for 30 days:
+    - He needs to wait for the result until the event ends after July 30th;
+    - Before the settlement of the event, we don't know how many people have completed the StakeDrop. The StakeDrop point threshold is `27M KSM * 90 days * 1.02 = 2.4B`. So the lower bound of Gavin's reward is `100 * 30 * (27M / 2.4B) = 33.75 PHA`.
+    - If there are 3M KSM staked for 90 days in totoal, the total number of points is `3M KSM * 90 days * 1.02 = 275.4M`. Gavin will get `100 * 30 * (27M / 275.4M) = 294.1 PHA`
+- applying the same rules, if he stopped after staking for 90 days, he will get a minimal of 101 PHA.
+
+## FAQ
+### How to Participate?
+In the period from May 1, 2020 to July 30, 2020, one may claim PHA StakeDrop if he or she stake any amount of KSM on Kusama Network, nominate whitelisted nodes, and meet the requirements below:
+
+- the amount of KSM voting the whitelisted validators he or she nominated > 10 KSM
+- the accumulated nominating period > 30 days
+
+### Who shall I Nominate?
+Phala will publish the validator whitelist [here](https://docs.google.com/spreadsheets/d/1rHByHRy-YYYrBzFUY27N99wNI4r-YH97gVoS8i2wJMA/edit?usp=sharing). Stay updated and copy the addresses in our list to start your nomination.
+
+To better support Phala, you can nominate Phala's validators listed in the page.
+
+### Can I change my validators in the middle?
+
+Yes. The reason why StakeDrop is better is that a participant change the nominated validators as they wish. He or she can change the validators or stop nominating at any time. The effective stake amount will be automatically calculated by the monitor script. 
+To be fairer, Polkadot hopes the votes of all validators to be as equal as possible in the NPoS mechanism.[Learn more at Polkadot Wiki](https://wiki.polkadot.network/docs/zh-CN/learn-staking). 
+
+### How to calculate the final staking amount when the staking period expired?
+
+In the diagram, the pink dots are normal validators, the white dots are whitelist validators, and the green dots are the ones being nominated. Suppose there are 100 KSM staked for 30 days:
+
+- If the validators you nominated were all whitelisted, you would receive PHA reward resulted from 100 KSM * 30 days. 
+- If you nominated both normal validators and whitelisted validators, and if you voted 90 KSM for whitelisted validators, you would receive PHA reward resulted from 90 KSM * 30 days. 
+- If you changed your validators in the middle but both the validator before and after the change were all whitelisted, you would still receive PHA reward resulted from 100 KSM * 30 days. 
+- If you stopped staking at the 40th day, you would receive PHA reward resulted from 100 KSM * 40 days at July 30, 2020. 
+- If you staked for 29 days, paused at the 30th day by accident, and restarted to stake for 2 more days, you would receive PHA reward resulted from 100 KSM * (29+2) days.
+
+## How To Align The Execution with The Rule
+
+Don't trust, verify.
+
+As we mentioned in the beginning, we can't implement lockdrop on Kusama though, our statistics scripts and reward-claiming contract on Etherum will be open-source and verifiable by anyone.
+
+Besides, we will also provide a toolkit for your convenience including: 
+
+- a StakeDrop App on which you can stake to participate the StakeDrop by one click, and a caculator showing real-time staking amount and reward amount.
+- the StakeDrop App will have whitelist validator and the introduction automatically updated
+- the ERC20 contract address and reward-claiming contract address on Etherum.
+- one can input his or her ETH address on the StakeDrop app and receive PHA on Etherum.
+
+## Reference Algorithm
+
+The statistic is based on era (~3600 blocks on Kusama).
+
+Pseudo-code to calculate the StakeDrop points for all nominators:
+
+```
+
+table record
+    era: int
+    nominator: address
+    valid_amount: number
+
+
+points = dict()
+
+nominators = [select distinct(nominator) from records]
+for nominator in nominators:
+    data = [
+        select valid_amount
+        from records
+        where `nominator` = nominator and valid_amount > 10  # a minimal of 10 KSM
+        order by valid_amount desc
+    ]
+    
+    segments = []
+    while data is not empty:
+        value = min(data)
+        eras = len(data)
+        segments.append((eras, value))
+        
+        data[:] -= value
+        data = [select valid_amount from data where v > 0]
+    
+    points[nominator] = sum([
+        select (era / 4) * 1.01^((eras - 120) / 240) * value
+        from segments
+        where era >= 120  # 30 days at least
+    ])
+    
+
+```
+
+## KSM Stakdrop page
+
+Modify the polkadot{.js} app "Stake" page.
+
+1. Information
+    1. Validator whitelist
+    2. Rules text
+    3. Participation stats (total people / stake)
+2. PHA reward estimation (user points, network points, PHA est)
+    1. Without wallet: user inputed KSM amount
+    2. With wallet: show valid stake per era, PHA est
+3. One-click stake:
+    1. if no stake: one-click to stake to whitelisted validators
+    2. if has stake but not whitelisted: one-click to change to whitelisted validators
+    3. if has stake and whitelisted: shows "Your are participating"
+
+
+
