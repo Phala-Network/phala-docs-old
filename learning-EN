@@ -1,0 +1,33 @@
+# Phala Club of Privacy Computing
+
+## Contents:
+- [Terms](##Terms)
+- [Thesis](##Thesis)
+- [Articles](##Articles)
+- [Project-related](##Project-related)
+
+## Terms
+- [Privacy Computing](https://www.sciencedirect.com/science/article/pii/S2095809919308240)
+- [Trusted Computing](https://en.wikipedia.org/wiki/Trusted_Computing)
+    - [Trusted Execution Environment (TEE)](https://www.trustonic.com/news/technology/what-is-a-trusted-execution-environment-tee/)
+    - [Secure Multi-party Computation (MPC)](https://www.inpher.io/technology/what-is-secure-multiparty-computation)
+    - [Zero Knowledge Proof (ZKP)](https://www.youtube.com/watch?v=OcmvMs4AMbM)
+    - [Homomorphic Encryption](https://www.forbes.com/sites/bernardmarr/2019/11/15/what-is-homomorphic-encryption-and-why-is-it-so-transformative/#6491fd007e93)
+- [Information Privacy](https://en.wikipedia.org/wiki/Information_privacy)
+
+## Thesis
+- [Ekiden: A platform for confidentiality-preserving, trustworthy, and performant smart contract execution](https://arxiv.org/pdf/1804.05141)
+- [Slalom: Fast, Verifiable and Private Execution of Neural Networks in Trusted Hardware](https://arxiv.org/abs/1806.03287)
+- [MY DATA, MY TERMS: A PROPOSAL FOR PERSONAL DATA USE LICENSES](http://jolt.law.harvard.edu/assets/digestImages/Paulius-Data-licenses-HJOLTDigest-Feb20.pdf)
+- [A Guide to Fully Homomorphic Encryption](https://eprint.iacr.org/2015/1192.pdf)
+
+## Articles
+- [Starting with Barbican, Sandbox and Trusted Computing](https://medium.com/phala-network/starting-with-barbican-sandbox-and-trusted-computing-fb1e48726a1e) 
+- [Ekiden: An Oasis of Scalability Experiment](https://medium.com/phala-network/ekiden-an-oasis-of-scalability-experiment-5a6bee3a65c8)
+- [The Future of Crypto: The Latest Cryptography Advances Set to Change Blockchain](https://cointelegraph.com/news/the-future-of-crypto-the-latest-cryptography-advances-set-to-change-blockchain)
+- [What Are Zk-SNARKs and How Do They Affect Digital Privacy?](https://cointelegraph.com/news/what-are-zk-snarks-and-how-do-they-affect-digital-privacy)
+
+## Project-related
+- [Phala - What If We Could Collect Data While Protecting Privacy](https://medium.com/phala-network/what-if-we-could-collect-data-while-protecting-privacy-73d5ed6d904c)
+- [ARPA - For Blockchain, ARPA's Privacy Computing is the Next Big Thing](https://finance.yahoo.com/news/blockchain-arpas-privacy-computing-next-094200795.html)
+- [Suterusu - A short note on privacy-preserving proof-of-stake protocols](https://medium.com/suterusu/a-short-note-on-privacy-preserving-proof-of-stake-protocols-f86daf3c23d9)
