@@ -1,0 +1,34 @@
+
+## 目录：
+- [术语](##术语)
+- [论文](##论文)
+- [文章](##文章)
+- [项目相关](##项目相关)
+
+## 术语
+- 隐私计算
+    - [隐私计算入门笔记](https://blog.csdn.net/qq_32938957/article/details/95724282?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746257719724839220939%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.57652%2522%257D&request_id=158746257719724839220939&biz_id=0&utm_source=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1)
+    - [面向隐私保护的新型计算](http://www.txrjy.com/thread-1059061-1-1.html)
+- [可信计算](https://wenku.baidu.com/view/163a7ed3312b3169a551a47c.html)
+- [可信执行环境（TEE）](https://blog.csdn.net/laviolette/article/details/51495833?ops_request_misc=&request_id=&biz_id=102&utm_source=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0)
+- 联邦学习
+    - [安全多方计算](https://blog.csdn.net/com_stu_zhang/article/details/5655104)
+    - [同态加密](https://blog.csdn.net/weixin_42470308/article/details/81482052?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746293019724835863907%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=158746293019724835863907&biz_id=0&utm_source=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-2)
+- [零知识证明](https://www.jianshu.com/p/c7074312fb21)
+- [个人信息隐私权](http://china.findlaw.cn/info/minshang/minfa/minshiquanli/renshenquan/yinsiquan/1398796.html)
+
+## 论文
+- [Ekiden: A platform for confidentiality-preserving, trustworthy, and performant smart contract execution](https://arxiv.org/pdf/1804.05141)
+- [Slalom: Fast, Verifiable and Private Execution of Neural Networks in Trusted Hardware](https://arxiv.org/abs/1806.03287)
+- [MY DATA, MY TERMS: A PROPOSAL FOR PERSONAL DATA USE LICENSES](http://jolt.law.harvard.edu/assets/digestImages/Paulius-Data-licenses-HJOLTDigest-Feb20.pdf)
+- [A Guide to Fully Homomorphic Encryption](https://eprint.iacr.org/2015/1192.pdf)
+- [Oblivious Multi-Party Machine Learning on Trusted Processors](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_ohrimenko.pdf)
+- [隐私计算研究范畴及发展趋势](http://xueshu.baidu.com/usercenter/paper/show?paperid=c7125dc82d5d352800952145d140d4ba&site=xueshu_se) 
+- [一种新型的分布式隐私保护计算模型及其应用](http://xueshu.baidu.com/usercenter/paper/show?paperid=e3ab87c4ecd941247b36ab80fa88f558&site=xueshu_se)
+
+
+## 文章
+loading...
+
+## 项目相关
+loading...
